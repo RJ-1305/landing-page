@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revanth J - Landing Page</title>
+  <style>
+    :root {
+      --bg-light: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      --bg-dark: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      --text-light: #222;
+      --text-dark: #f2f2f2;
+      --card-light: rgba(255, 255, 255, 0.75);
+      --card-dark: rgba(0, 0, 0, 0.65);
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    #mode-toggle {
+      display: none;
+    }
+    #mode-toggle:checked ~ .container {
+      background: var(--card-dark);
+      color: var(--text-dark);
+    }
+    #mode-toggle:checked ~ body {
+      background: var(--bg-dark);
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      color: white;
+      transition: transform 0.3s ease;
+    }
+    .toggle-btn:hover {
+      transform: scale(1.1);
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 20px;
+      background: var(--card-light);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-in-out;
+      max-width: 800px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1.5s ease;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: #ff416c;
+      animation: fadeIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      text-align: left;
+      display: inline-block;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    li {
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    li:hover {
+      transform: translateX(8px) scale(1.05);
+      color: #ff4b2b;
+      font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
+    a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="mode-toggle">
+  <label for="mode-toggle" class="toggle-btn">🌙/☀️</label>
+  <div class="container">
+    <h1>Hello, I'm Revanth J</h1>
+    <p>
+      I am currently pursuing <b>BE Computer Science and Engineering</b> in 
+      <b>DMI College of Engineering</b>.<br><br>
+      I am very passionate about programming in <b>Python, Java, C</b> and 
+      front-end development.
+    </p>
+    <h2>💻 My Passion for the Course</h2>
+    <p>
+      Computer Science has always fascinated me because it allows me to create, innovate,
+      and solve real-world problems. I am deeply passionate about:
+    </p>
+    <ul>
+      <li>Building clean and user-friendly web applications</li>
+      <li>Exploring algorithms and problem-solving techniques</li>
+      <li>Developing projects using Python, Java, and C</li>
+      <li>Learning modern technologies like AI, ML, and IoT</li>
+    </ul>
+    <h2> Extra-Curricular Activities</h2>
+    <p>
+      Along with academics, I strongly believe in holistic development and actively 
+      participate in extra-curricular activities such as:
+    </p>
+    <ul>
+      <li>Volunteering in college technical clubs and events</li>
+      <li>Participating in hackathons and coding competitions</li>
+      <li>Sports activities like cricket and badminton</li>
+      <li>Creative hobbies like game developing and 3D model making</li>
+    </ul>
+    <a href="mailto:revanthjpvt@gmail.com">📧 Contact Me</a>
+  </div>
+</body>
+</html>
